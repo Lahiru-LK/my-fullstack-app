@@ -2,22 +2,21 @@ import { useEffect, useState } from 'react';
 
 function MainBG() {
   const [message, setMessage] = useState('');
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+  const API_BASE_URL = "https://my-monorepo-api-bzf0g8evfnf4hrah.southeastasia-01.azurewebsites.net";
 
   console.log("✅ API_BASE_URL:", API_BASE_URL);
-  console.log("🌐 Full ENV:", import.meta.env);
-  console.log("🌍 API:", import.meta.env.VITE_API_BASE_URL);
+  console.log("🌐 Full ENV object:", import.meta.env); // Correct way
 
   useEffect(() => {
     if (!API_BASE_URL) {
-      console.warn("❌ API_BASE_URL is undefined. Check environment variables.");
+      console.warn("API_BASE_URL is undefined. Check environment variables.");
       return;
     }
 
     fetch(`${API_BASE_URL}/`)
       .then(res => res.json())
       .then(data => setMessage(data.message))
-      .catch(err => console.error("❌ Error fetching from backend:", err));
+      .catch(err => console.error("Error fetching from backend:", err));
   }, [API_BASE_URL]);
 
   return (
