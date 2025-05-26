@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 
 function MainBG() {
   const [message, setMessage] = useState('');
-  const API_BASE_URL = "https://my-monorepo-api-bzf0g8evfnf4hrah.southeastasia-01.azurewebsites.net";
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   console.log("✅ API_BASE_URL:", API_BASE_URL);
-  console.log("🌐 Full ENV object:", import.meta.env); // Correct way
+  console.log("🌐 Full ENV object:", import.meta.env); 
 
   useEffect(() => {
     if (!API_BASE_URL) {

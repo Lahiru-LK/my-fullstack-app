@@ -35,8 +35,7 @@ server/Scripts/
 # Node modules (React)
 client/node_modules/
 
-# Env files
-client/.env
+
 
 # OS + IDE files
 .DS_Store
