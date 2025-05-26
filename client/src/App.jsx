@@ -4,7 +4,7 @@ import MainBG from './components/mainbg';
 function App() {
   return (
     <div>
-      <h1>Vite + Flask Fullstack App</h1>
+      <h1>Vite + Flask Fullstack App Test</h1>
       <MainBG />
     </div>
   );
