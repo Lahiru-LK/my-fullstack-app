@@ -6,7 +6,7 @@ CORS(app)  # Enable CORS for all routes
 
 @app.route('/')
 def home():
-    return jsonify({"message": "Hello xxxxxxxxxxxxxx xxxxxxxxxxxxxxxx xxxxxxxxxxx xxxxxxxxxxx from Flask backend!"})
+    return jsonify({"message": "Hello from Flask backend!"})
  
 if __name__ == '__main__':
     app.run(debug=True)
