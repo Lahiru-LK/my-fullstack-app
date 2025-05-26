@@ -23,3 +23,22 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Python virtual environment and bytecode
+server/venv/
+server/__pycache__/
+server/*.pyc
+server/Lib/
+server/Scripts/
+
+# Node modules (React)
+client/node_modules/
+
+# Env files
+client/.env
+
+# OS + IDE files
+.DS_Store
+.vscode/
+*.log
