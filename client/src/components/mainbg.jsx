@@ -6,6 +6,7 @@ function MainBG() {
 
   console.log("✅ API_BASE_URL:", API_BASE_URL);
 
+  
   useEffect(() => {
     fetch(`${API_BASE_URL}/`)
       .then(res => res.json())
