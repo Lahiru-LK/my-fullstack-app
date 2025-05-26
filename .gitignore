@@ -1,7 +1,6 @@
 # Node.js (React)
 client/node_modules/
 client/dist/
-client/.env
 client/.DS_Store
 
 # Python (Flask)
