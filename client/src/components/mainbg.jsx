@@ -6,9 +6,8 @@ function MainBG() {
 
   console.log("✅ API_BASE_URL:", API_BASE_URL);
   console.log("🌐 Full ENV:", import.meta.env);
-
-
-  
+  console.log("🌍 API:", import.meta.env.VITE_API_BASE_URL);
+ 
   useEffect(() => {
     fetch(`${API_BASE_URL}/`)
       .then(res => res.json())
