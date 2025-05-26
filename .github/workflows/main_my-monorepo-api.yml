@@ -1,0 +1,32 @@
+name: Flask Backend Deploy (Monorepo)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: GitHub repo එක checkout කරන්න
+        uses: actions/checkout@v4
+
+      - name: Python version එක සකසන්න
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Dependencies install කරන්න
+        run: |
+          cd server
+          pip install -r requirements.txt
+
+      - name: Azure Web App එකට Deploy කරන්න
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'my-monorepo-api'
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: ./server
